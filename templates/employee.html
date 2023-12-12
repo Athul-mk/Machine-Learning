@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Employees Current Status</h1>
+    <form method="POST" accept-charset="UTF-8" action="/predict">
+        <div class="row">
+            <div class="col-md-6 form-control">
+                <label<b>AGE</b></label>
+                <input type="text" id="age" name="age" required="1">
+            </div>
+            <br><br>
+            <div class="col-md-6 form-control">
+                <label><b>EXP. IN CURRENT DOMAIN</b></label>
+                <input type="text" id="experience" name="experience" required="1" placeholder="enter exp">
+            </div>
+            <br><br>
+            <div class="col-md-6 form-control">
+                <form action="'/action_page.php">
+                <br><br><br>
+                <label><b>EDUCATION</b></label>
+                <select id="education" name="education">
+                    <option value="0">Bachelors</option>
+                    <option value="1">Masters</option>
+                    <option value="2">PHD</option>                              
+                </select>
+                <br><br><br>
+                <label><b>JOINING YEAR</b></label>
+               <input type="number" name="joiningyear" id="joiningyear" min="1900" max="2099" step="1" value="2016" />
+                <br><br><br>
+                <label><b>CITY</b></label>
+                <select id="city" name="city">
+                    <option value="0">Banglore</option>
+                    <option value="1">Pune</option>
+                    <option value="2">New Delhi</option>
+                </select>
+                <br><br><br>
+                <label><b>PAYMENT-TIER</b></label>
+                <select id="paymenttier" name="paymenttier">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                    <option value="2">3</option>
+                </select>
+                <br><br><br>
+                <label><b>GENDER</b></label>
+                <select id="gender" name="gender">
+                    <option value="0">Male</option>
+                    <option value="1">Female</option>
+                </select>
+                <br><br><br>
+                <label><b>EVER BENCHED</b></label>
+                <select id="everbenched" name="everbenched">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                </form> 
+            </div>
+            <br><br><br>
+            <div class="col-md-12 form-control">
+                <input type="submit" class="btn-info" value="predict">
+            </div>
+        </div>
+    </form>
+    {{ predict}}
+    <!-- {% if predict %}
+        <p>The Predicted Value Is: {{predict}}</p>
+    {% endif %} -->
+</body>
+</html>
